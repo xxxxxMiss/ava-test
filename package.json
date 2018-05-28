@@ -1,0 +1,48 @@
+{
+  "name": "ava-test",
+  "version": "1.0.0",
+  "description": "test ava with babel@7.x",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xxxxxMiss"
+  },
+  "keywords": [
+    "ava",
+    "test",
+    "babel7"
+  ],
+  "author": "xxxxxMiss <xxxxxmiss@gmail.com> (https://github.com/xxxxxMiss)",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.49",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0-beta.49",
+    "@babel/preset-env": "^7.0.0-beta.49",
+    "@babel/register": "^7.0.0-beta.49",
+    "ava": "1.0.0-beta.4",
+    "babel-core": "^7.0.0-bridge.0",
+    "lodash": "^4.17.10"
+  },
+  "ava": {
+    "files": [
+      "test/*.js"
+    ],
+    "require": [
+      "@babel/register"
+    ],
+    "babel": {
+      "testOptions": {
+        "plugins": [
+          "@babel/plugin-syntax-dynamic-import"
+        ],
+        "presets": [
+          "@babel/preset-env"
+        ],
+        "babelrc": false
+      }
+    }
+  }
+}
